@@ -14,21 +14,35 @@
 //   ],
 // };
 
+// import axios from "axios";
+
+// const BASE_URL = "https://qura-an-backend-tbdt.onrender.com";
+
+// let ayatsData = [];
+
+// (async () => {
+//   try {
+//     // 👇 Fetch all Ayats (you can filter by surah_id if needed)
+//     const response = await axios.get(`${BASE_URL}/adminuser/ayat/?surah_id=1`);
+//     ayatsData = response.data;
+//     console.log("✅ Ayats fetched successfully:", ayatsData);
+//   } catch (error) {
+//     console.error("❌ Failed to fetch Ayats:", error);
+//   }
+// })();
+
+// export default ayatsData;
 import axios from "axios";
 
-const BASE_URL = "https://qura-an-backend-tbdt.onrender.com";
+const BASE_URL = "https://qura-an-backend-tbdt.onrender.com"; // your backend URL
 
-let ayatsData = [];
-
-(async () => {
+// ✅ Function to fetch ayats dynamically by surah_id
+export const getAyatsBySurah = async (surahId) => {
   try {
-    // 👇 Fetch all Ayats (you can filter by surah_id if needed)
-    const response = await axios.get(`${BASE_URL}/adminuser/ayat/?surah_id=1`);
-    ayatsData = response.data;
-    console.log("✅ Ayats fetched successfully:", ayatsData);
+    const response = await axios.get(`${BASE_URL}/adminuser/ayat/?surah_id=${surahId}`);
+    return response.data; // returns ayats array
   } catch (error) {
     console.error("❌ Failed to fetch Ayats:", error);
+    return [];
   }
-})();
-
-export default ayatsData;
+};
