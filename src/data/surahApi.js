@@ -9,6 +9,7 @@ export const getSurahs = async () => {
     // Map data into the same structure your component expects
     return response.data.map((s) => ({
       id: s.id,
+      number:s.surah_number,
       arabic: s.surah_name_arabic,
       malayalam: s.surah_name_malayalam,
       english: s.surah_name_english,
