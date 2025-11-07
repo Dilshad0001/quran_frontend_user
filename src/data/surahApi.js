@@ -5,7 +5,7 @@ const BASE_URL = "https://qura-an-backend-tbdt.onrender.com"; // your backend UR
 // ✅ Fetch all Surahs
 export const getSurahs = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/adminuser/surah/`);
+    const response = await axios.get(`${BASE_URL}/user/surah/`);
     // Map data into the same structure your component expects
     return response.data.map((s) => ({
       id: s.id,

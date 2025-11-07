@@ -33,7 +33,7 @@ let ayatsData = [];
 (async () => {
   try {
     // 👇 Fetch all Ayats (you can filter by surah_id if needed)
-    const response = await axios.get(`${BASE_URL}/adminuser/ayat/?surah_id=1`);
+    const response = await axios.get(`${BASE_URL}/user/ayat/?surah_id=1`);
     ayatsData = response.data;
     console.log("✅ Ayats fetched successfully:", ayatsData);
   } catch (error) {
