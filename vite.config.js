@@ -36,8 +36,8 @@ export default defineConfig({
         name: "Quran Reader",
         short_name: "Quran",
         description: "A beautiful Quran reading app with Malayalam & Tafseer",
-        theme_color: "#fbbf24", // amber color
-        background_color: "#ffffff",
+        theme_color: "#a7f3d0",
+        background_color: "#ecfdf5",
         display: "standalone",
         start_url: "/",
         icons: [
