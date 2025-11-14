@@ -8,6 +8,7 @@ import { getSurahs } from "../data/surahApi";
 import { getFractionsByAyat } from "../data/fractionAyatData";
 import AyatContent from "../components/AyatContent";
 import AyatSlider from "../components/AyatSlider";
+import SurahHeader from "../components/SurahHeader";
 
 function SurahDetailPage() {
   const { id } = useParams();
@@ -73,6 +74,9 @@ function SurahDetailPage() {
           </button>
         </div>
       </div>
+
+      <SurahHeader title={surahName} />
+
 
       {/* Bismillah */}
       {id !== "9" && (
