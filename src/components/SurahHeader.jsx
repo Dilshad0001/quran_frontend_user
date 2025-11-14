@@ -5,12 +5,7 @@ function SurahHeader({ title }) {
   return (
     <div className="w-full flex justify-center my-4">
       <div className="relative w-full max-w-xl">
-        {/* <img
-          src={headerImg}
-          alt="Surah Header"
-          className="w-full object-contain"
-          style={{ height: "60px" }}
-        /> */}
+
         <img
   src={headerImg}
   alt="Surah Header"
