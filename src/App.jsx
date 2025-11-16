@@ -30,6 +30,7 @@ import SurahDetailPage from "./pages/SurahDetailPage";
 import InstallButton from "./components/InstallButton";
 import MushafPage from "./pages/MushafPage";
 import MushafPageFlip from "./pages/MushafPageFlip";
+import MushafFlip from "./pages/MushafFlip";
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
         {/* <Route path="/surah/:id" element={<SurahDetailPage />} /> */}
         <Route path="/mushaf/:page" element={<MushafPage />} />
         <Route path="/mushaf" element={<MushafPageFlip/>} />
+        <Route path="/mushaf" element={<MushafFlip />} />
+
 
 
       </Routes>
