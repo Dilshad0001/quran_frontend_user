@@ -90,7 +90,12 @@ function MushafFlip() {
               <TransformComponent>
                 <img
                   src={`/mushaf/${i + 1}.jpg`}
-                  className="w-full h-full object-contain"
+                //   className="w-full h-full object-contain"
+                  style={{
+                        height: "100%",
+                        width: "100%",
+                        objectFit: "contain"
+                    }}
                 />
               </TransformComponent>
             </TransformWrapper>

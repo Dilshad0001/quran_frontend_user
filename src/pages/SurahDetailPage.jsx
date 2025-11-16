@@ -60,7 +60,12 @@ function SurahDetailPage() {
       {view === "mushaf" && (
   <img 
     src={`/mushaf/${id}.jpg`} 
-    className="w-full"
+    // className="w-full"
+      style={{
+    height: "50%",
+    width: "50%",
+    objectFit: "contain"
+  }}
   />
 )}
 <div className="flex gap-3 p-4">

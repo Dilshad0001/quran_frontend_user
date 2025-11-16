@@ -25,7 +25,12 @@ function MushafPageFlip() {
             <div key={page} className="bg-white">
               <img
                 src={`/mushaf/${page}.jpg`}
-                className="w-full h-full object-contain"
+                // className="w-full h-full object-contain"
+                  style={{
+    height: "50%",
+    width: "50%",
+    objectFit: "contain"
+  }}
               />
             </div>
           );

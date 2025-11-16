@@ -69,7 +69,12 @@ function MushafPage() {
       <img
         src={`/mushaf/${currentPage}.jpg`}
         alt={`Page ${page}`}
-        className="w-full"
+        // className="w-full"
+          style={{
+    height: "150%",
+    width: "150%",
+    objectFit: "contain"
+  }}
       />
     </div>
   );
