@@ -17,14 +17,31 @@ function MushafFlip() {
 
   return (
     <div className="w-full h-screen bg-black flex justify-center items-center">
-      <HTMLFlipBook
+      {/* <HTMLFlipBook
         ref={bookRef}
         width={400}
         height={600}
         showCover={false}
         mobileScrollSupport={true}
         className="shadow-xl"
-      >
+      > */}
+      <HTMLFlipBook
+  ref={bookRef}
+  width={400}
+  height={600}
+  showCover={false}
+  mobileScrollSupport={true}
+  className="shadow-xl"
+
+  useMouseEvents={true}
+  clickToFlip={true}
+  disableFlipByClick={false}
+  swipeDistance={10}
+  flippingTime={400}
+  maxShadowOpacity={0.3}
+  autoSize={true}
+/>
+
         {Array.from({ length: totalPages }).map((_, i) => (
           <div key={i} className="bg-white flex justify-center">
             <img
