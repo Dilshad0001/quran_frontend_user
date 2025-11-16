@@ -82,6 +82,7 @@ function MushafFlip() {
         showCover={false}
         mobileScrollSupport={true}
         className="shadow-xl"
+        direction="rtl" 
         
         useMouseEvents={true}
         clickToFlip={true}

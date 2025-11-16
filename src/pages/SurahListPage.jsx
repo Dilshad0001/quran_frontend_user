@@ -197,7 +197,8 @@ function SurahListPage() {
               //   const page = surahStartPage[surah.number];
               //   navigate(`/mushaf/${page}`);
               // }}
-              onClick={() => navigate(`/mushaf?page=${surah.startPage}`)}
+              // onClick={() => navigate(`/mushaf?page=${surah.startPage}`)}
+              onClick={() => navigate(`/mushaf?page=${surahStartPage[surah.number]}`)}
 
               className="h-16 p-6 bg-white cursor-pointer shadow rounded-3xl flex items-center justify-between"
             >
