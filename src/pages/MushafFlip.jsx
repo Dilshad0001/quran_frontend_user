@@ -78,7 +78,7 @@ function MushafFlip() {
         direction="rtl"
         className="shadow-xl"
       >
-        {Array.from({ length: totalPages }).map((_, i) => (
+        {/* {Array.from({ length: totalPages }).map((_, i) => (
           <div key={i} className="bg-white flex justify-center items-center">
             <TransformWrapper
               minScale={1}
@@ -88,19 +88,44 @@ function MushafFlip() {
               pinch={{ disabled: false }}
             >
               <TransformComponent>
+                
                 <img
                   src={`/mushaf/${i + 1}.jpg`}
                 //   className="w-full h-full object-contain"
                   style={{
-                        height: "100%",
-                        width: "100%",
-                        objectFit: "contain"
+                        // height: "100%",
+                        // width: "100%",
+                        // objectFit: "contain"
+                        height: "100vh",
+width: "100vw",
+objectFit: "cover"
+
                     }}
                 />
               </TransformComponent>
             </TransformWrapper>
           </div>
-        ))}
+        ))} */}
+        {Array.from({ length: totalPages }).map((_, i) => (
+  <div
+    key={i}
+    className="bg-yellow-600 flex justify-center items-center h-screen w-screen"
+  >
+    <TransformWrapper minScale={1} maxScale={3}>
+      <TransformComponent>
+        <img
+          src={`/mushaf/${i + 1}.jpg`}
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "fill"
+          }}
+        />
+      </TransformComponent>
+    </TransformWrapper>
+  </div>
+))}
+
       </HTMLFlipBook>
     </div>
   );
