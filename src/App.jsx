@@ -41,7 +41,7 @@ function App() {
         {/* Later we can add more routes like: */}
         {/* <Route path="/surah/:id" element={<SurahDetailPage />} /> */}
         <Route path="/mushaf/:page" element={<MushafPage />} />
-        <Route path="/mushaf" element={<MushafPageFlip/>} />
+        {/* <Route path="/mushaf" element={<MushafPageFlip/>} /> */}
         <Route path="/mushaf" element={<MushafFlip />} />
 
 
