@@ -28,6 +28,7 @@ import SurahDetailPage from "./pages/SurahDetailPage";
 // import SurahDetailPage from "./pages/SurahDetailPage";
 // import SurahDetailPage from "./pages/SurahDetailPage";
 import InstallButton from "./components/InstallButton";
+import MushafPage from "./pages/MushafPage";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
         <Route path="/surah/:id" element={<SurahDetailPage />} />
         {/* Later we can add more routes like: */}
         {/* <Route path="/surah/:id" element={<SurahDetailPage />} /> */}
+        <Route path="/mushaf/:page" element={<MushafPage />} />
+
       </Routes>
       <InstallButton /> 
     </Router>
