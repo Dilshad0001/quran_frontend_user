@@ -1,5 +1,7 @@
+
 // import React from "react";
 // import HTMLFlipBook from "react-pageflip";
+// import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 // import { useSearchParams } from "react-router-dom";
 
 // function MushafFlip() {
@@ -19,34 +21,57 @@
 
 //   return (
 //     <div className="w-full h-screen bg-black flex justify-center items-center">
-//       <HTMLFlipBook
+//       {/* <HTMLFlipBook
 //         ref={bookRef}
-//         width={400}
-//         height={600}
+//         // width={400}
+//         width={window.innerWidth}
+//         // height={600}
+//         height={window.innerHeight}
 //         showCover={false}
 //         mobileScrollSupport={true}
-//         className="shadow-xl"
 //         direction="rtl"
-//         useMouseEvents={true}
-//         clickToFlip={true}
-//         disableFlipByClick={false}
-//         swipeDistance={10}
-//         flippingTime={400}
-//         maxShadowOpacity={0.3}
-//         autoSize={true}
-//       >
+//         className="shadow-xl"
+//       > */}
+//       <HTMLFlipBook
+//   ref={bookRef}
+//   width={window.innerWidth}
+//   height={window.innerHeight}
+//   size="stretch"     // MUST add this
+//   minWidth={300}
+//   maxWidth={4000}
+//   minHeight={300}
+//   maxHeight={4000}
+//   showCover={false}
+//   mobileScrollSupport={true}
+//   direction="rtl"
+// >
+
 //         {Array.from({ length: totalPages }).map((_, i) => (
-//           <div key={i} className="bg-white flex justify-center">
-//             <img
-//               src={`/mushaf/${i + 1}.jpg`}
-//               className="w-full h-full object-contain"
-//             />
-//           </div>
-//         ))}
+//   <div
+//     key={i}
+//     className="bg-yellow-600 flex justify-center items-center h-screen w-screen"
+//   >
+//     <TransformWrapper minScale={1} maxScale={3}>
+//       <TransformComponent>
+//         <img
+//           src={`/mushaf/${i + 1}.jpg`}
+//           style={{
+//             height: "100%",
+//             width: "100%",
+//             objectFit: "fill"
+//           }}
+//         />
+//       </TransformComponent>
+//     </TransformWrapper>
+//   </div>
+// ))}
+
 //       </HTMLFlipBook>
 //     </div>
 //   );
 // }
+
+// export default MushafFlip;
 import React from "react";
 import HTMLFlipBook from "react-pageflip";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -69,64 +94,41 @@ function MushafFlip() {
 
   return (
     <div className="w-full h-screen bg-black flex justify-center items-center">
+
       <HTMLFlipBook
         ref={bookRef}
-        width={400}
-        height={600}
+        width={window.innerWidth}
+        height={window.innerHeight}
+        size="stretch"
         showCover={false}
         mobileScrollSupport={true}
         direction="rtl"
-        className="shadow-xl"
+        minWidth={300}
+        maxWidth={4000}
+        minHeight={300}
+        maxHeight={4000}
       >
-        {/* {Array.from({ length: totalPages }).map((_, i) => (
-          <div key={i} className="bg-white flex justify-center items-center">
-            <TransformWrapper
-              minScale={1}
-              maxScale={3}
-              wheel={{ step: 0.1 }}
-              doubleClick={{ disabled: false }}
-              pinch={{ disabled: false }}
-            >
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <div
+            key={i}
+            className="h-full w-full flex justify-center items-center bg-black"
+          >
+            <TransformWrapper minScale={1} maxScale={3}>
               <TransformComponent>
-                
                 <img
                   src={`/mushaf/${i + 1}.jpg`}
-                //   className="w-full h-full object-contain"
                   style={{
-                        // height: "100%",
-                        // width: "100%",
-                        // objectFit: "contain"
-                        height: "100vh",
-width: "100vw",
-objectFit: "cover"
-
-                    }}
+                    maxHeight: "100%",
+                    maxWidth: "100%",
+                    objectFit: "contain"
+                  }}
                 />
               </TransformComponent>
             </TransformWrapper>
           </div>
-        ))} */}
-        {Array.from({ length: totalPages }).map((_, i) => (
-  <div
-    key={i}
-    className="bg-yellow-600 flex justify-center items-center h-screen w-screen"
-  >
-    <TransformWrapper minScale={1} maxScale={3}>
-      <TransformComponent>
-        <img
-          src={`/mushaf/${i + 1}.jpg`}
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "fill"
-          }}
-        />
-      </TransformComponent>
-    </TransformWrapper>
-  </div>
-))}
-
+        ))}
       </HTMLFlipBook>
+
     </div>
   );
 }
