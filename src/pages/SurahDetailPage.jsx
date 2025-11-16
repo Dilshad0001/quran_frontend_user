@@ -15,7 +15,8 @@ function SurahDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [ayats, setAyats] = useState([]);
-  const [view, setView] = useState(null);
+  // const [view, setView] = useState(null);
+  const [view, setView] = useState("mushaf");
   const [surahName, setSurahName] = useState("");
   const [malayalamsurahName, setMalayalamSurahName] = useState("");
 
@@ -56,12 +57,31 @@ function SurahDetailPage() {
       {/* <div className="bg-green-800">
       <SurahHeader title={surahName} />
       </div> */}
+      {view === "mushaf" && (
+  <img 
+    src={`/mushaf/${id}.jpg`} 
+    className="w-full"
+  />
+)}
+<div className="flex gap-3 p-4">
+  <button onClick={() => setView("mushaf")}>Quran View</button>
+  <button onClick={() => setView("text")}>Text View</button>
+</div>
 
-      <AyatSlider 
+
+      {/* <AyatSlider 
   ayats={ayats} 
   toArabicNumber={toArabicNumber} 
   surahName={surahName}
-/>
+/> */}
+{view === "text" && (
+  <AyatSlider 
+    ayats={ayats} 
+    toArabicNumber={toArabicNumber} 
+    surahName={surahName}
+  />
+)}
+
 
     </div>
   );
