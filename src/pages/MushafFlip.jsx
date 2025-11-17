@@ -45,7 +45,7 @@ function MushafFlip() {
           // >
           <div
   key={i}
-  className="w-full h-full flex justify-center py-30 items-center bg-yellow-700"
+  className="w-full h-full flex justify-center py-30 items-center"
   style={{ height: "100%" }}
 >
 
