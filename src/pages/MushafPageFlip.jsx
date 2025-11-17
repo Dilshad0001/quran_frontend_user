@@ -27,8 +27,8 @@ function MushafPageFlip() {
                 src={`/mushaf/${page}.jpg`}
                 // className="w-full h-full object-contain"
                   style={{
-    height: "50%",
-    width: "50%",
+    height: "100%",
+    width: "100%",
     objectFit: "contain"
   }}
               />

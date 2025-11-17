@@ -62,8 +62,8 @@ function SurahDetailPage() {
     src={`/mushaf/${id}.jpg`} 
     // className="w-full"
       style={{
-    height: "50%",
-    width: "50%",
+    height: "100%",
+    width: "100%",
     objectFit: "contain"
   }}
   />

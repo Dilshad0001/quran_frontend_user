@@ -62,11 +62,13 @@ function MushafPage() {
 
   return (
     <div
-      className="min-h-screen bg-black"
+    
+      className="min-h-screen p-10 bg-yellow-400 flex justify-center items-center"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <img
+      <h1>hhhhuguyhiujnkjndkejfehijfeinh</h1>
+      {/* <img
         src={`/mushaf/${currentPage}.jpg`}
         alt={`Page ${page}`}
         // className="w-full"
@@ -75,7 +77,17 @@ function MushafPage() {
     width: "150%",
     objectFit: "contain"
   }}
-      />
+      /> */}
+      <img
+  src={`/mushaf/${currentPage}.jpg`}
+  alt={`Page ${page}`}
+  style={{
+    width: "100%",
+    height: "100vh",
+    objectFit: "cover",      // ← STRETCHES image vertically & horizontally
+  }}
+/>
+
     </div>
   );
 }
