@@ -87,6 +87,8 @@
 //     </div>
 //   );
 // }
+
+
 import React, { useEffect, useState } from "react";
 
 export default function MushafViewer({ startPage = 1 }) {
@@ -106,9 +108,9 @@ export default function MushafViewer({ startPage = 1 }) {
           .replace(/<\/svg>/, "");
 
         setSvg(`
-  <svg width="100%" height="auto" viewBox="0 0 1000 1500" preserveAspectRatio="xMidYMid meet">
+  <svg width="100%" height="100%" viewBox="0 -0 500 1000" preserveAspectRatio="xMidYMid meet">
     <foreignObject width="100%" height="100%">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%; height:auto; transform:scale(2); transform-origin: top left;">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%; height:auto; transform:scaleX(2) scaleY(2.35); transform-origin: top left;">
         ${text}
       </div>
     </foreignObject>
@@ -126,10 +128,10 @@ export default function MushafViewer({ startPage = 1 }) {
   }, [page]);
 
 return (
-  <div className="p-1 bg-red-500 min-h-screen">
+  <div className=" bg-red-500 min-h-screen">
     
     {/* Buttons */}
-    <div className="flex items-center gap-3 mb-5">
+    {/* <div className="flex items-center gap-3 mb-5">
       <button
         className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
         onClick={() => setPage((p) => Math.max(1, p - 1))}
@@ -145,11 +147,11 @@ return (
       >
         Next
       </button>
-    </div>
+    </div> */}
 
     {/* SVG Viewer */}
     <div
-      className="mushaf-svg w-full h-screen overflow-hidden bg-amber-600"
+      className="mushaf-svg w-full h-screen overflow-hidden bg-amber-600 "
       dangerouslySetInnerHTML={{ __html: svg }}
     />
   </div>
