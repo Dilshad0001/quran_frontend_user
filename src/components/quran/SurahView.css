@@ -1,0 +1,61 @@
+.surah-view {
+  padding: 12px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.back-btn {
+  background: #111827;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.surah-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.ayah-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ayah-card {
+  padding: 14px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.ayah-arabic {
+  font-size: 1.4rem;
+  text-align: right;
+  font-family: "Scheherazade New", serif;
+  margin-bottom: 8px;
+}
+
+.ayah-translation {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.audio-btn {
+  background: #2563eb;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width:600px){
+  .ayah-arabic { font-size: 1.25rem; }
+  .ayah-translation { font-size: 0.95rem; }
+}

@@ -140,6 +140,7 @@ function SurahListPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [surahs, setSurahs] = useState([]);
   const [filteredSurahs, setFilteredSurahs] = useState([]);
+  // const navigate=useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -175,6 +176,7 @@ function SurahListPage() {
             القرآن الكريم
           </h1>
         </div>
+        <button className="bg-amber-700" onClick={navigate("/mushaf-svg")}>to page</button>
 
         {/* Search */}
         <div className="relative mb-8">

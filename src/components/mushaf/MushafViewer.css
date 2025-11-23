@@ -1,0 +1,10 @@
+.mushaf-svg {
+  width: 100%;
+  overflow: hidden;   /* stops horizontal scrolling */
+}
+
+.mushaf-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

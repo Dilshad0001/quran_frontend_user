@@ -22,7 +22,6 @@ function MushafFlip() {
 
   return (
     <div className=" w-full h-full object-cover    bg-white flex justify-center items-center">
-      {/* <h1>jjjjjjj</h1> */}
 
       <HTMLFlipBook
         ref={bookRef}

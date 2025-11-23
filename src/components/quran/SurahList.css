@@ -1,0 +1,51 @@
+.surah-list { padding: 12px; max-width: 900px; margin: auto; }
+.surah-list__title { font-size: 1.25rem; margin-bottom: 8px; }
+
+.surah-list__grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.surah-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .15s, transform .08s;
+  border: 1px solid #eee;
+  background: white;
+}
+
+.surah-item:hover {
+  transform: translateY(-3px);
+  background: #f8f9fb;
+}
+
+.surah-item__num {
+  width:36px; height:36px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%;
+  background:#111827; color:white; font-weight:bold;
+}
+
+.surah-item__meta { display:flex; flex-direction:column; gap:2px; }
+.surah-item__name { font-weight:600; }
+
+.surah-item__arabic {
+  font-size:1.1rem;
+  font-family: "Scheherazade New", serif;
+}
+
+.surah-item__info {
+  font-size:0.85rem;
+  color:#666;
+}
+
+@media (max-width:600px){
+  .surah-list__grid { grid-template-columns: repeat(2, 1fr); }
+}
