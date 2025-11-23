@@ -1,7 +1,9 @@
 import React from "react";
 import MushafViewer from "../components/mushaf/MushafViewer";
+import { useParams } from "react-router-dom";
 
 export default function MushafSVGPage() {
+  const { page } = useParams(); 
   return (
     <div className="w-full min-h-screen bg-gray-200">
       {/* <h2 className="text-center text-xl font-semibold py-2 px-1">
@@ -9,7 +11,7 @@ export default function MushafSVGPage() {
       </h2> */}
 
       <div className="w-full overflow-hidden px-">
-        <MushafViewer startPage={1} />
+        <MushafViewer startPage={Number(page)  || 1} />
       </div>
     </div>
   );

@@ -73,12 +73,6 @@ function SurahDetailPage() {
   <button onClick={() => setView("text")}>Text View</button>
 </div>
 
-
-      {/* <AyatSlider 
-  ayats={ayats} 
-  toArabicNumber={toArabicNumber} 
-  surahName={surahName}
-/> */}
 {view === "text" && (
   <AyatSlider 
     ayats={ayats} 

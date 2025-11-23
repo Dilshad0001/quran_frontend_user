@@ -88,10 +88,11 @@ function App() {
       <Routes>
         <Route path="/" element={<SurahListPage />} />
         <Route path="/surah/:id" element={<SurahDetailPage />} />
-        <Route path="/mushaf/:page" element={<MushafPage />} />
+        {/* <Route path="/mushaf/:page" element={<MushafPage />} /> */}
+        <Route path="/mushaf-svg/:page/:surahId" element={<MushafSVGPage />} />
         <Route path="/mushaf" element={<MushafFlip />} />
         {/* <Route path="/test" element={<QuranTest />} /> */}
-        <Route path="/mushaf-svg" element={<MushafSVGPage />} />
+        <Route path="/mushaf-svg/:page" element={<MushafSVGPage />} />
 
       </Routes>
 

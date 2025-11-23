@@ -26,7 +26,7 @@
 // };
 import axios from "axios";
 
-const BASE_URL = "https://qura-an-backend-tbdt.onrender.com";
+const BASE_URL = "https://qura-an-backend-2.onrender.com";
 
 let ayatsData = [];
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://qura-an-backend-tbdt.onrender.com"; // your backend URL
+const BASE_URL = "https://qura-an-backend-2.onrender.com"; // your backend URL
 
 // ✅ Fetch all Surahs
 export const getSurahs = async () => {

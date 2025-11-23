@@ -1,6 +1,15 @@
 import React from "react";
 
+// function AyatContent({ ayats, view, toArabicNumber }) {
+
 function AyatContent({ ayats, view, toArabicNumber }) {
+  console.log("ayats===",ayats);
+  console.log("view===",view);
+  console.log("toArabicNumber===",toArabicNumber);
+  
+  // const ayats=1
+  // const view=
+  // const toArabicNumber=
   return (
     <div>
       {/* Default Arabic View */}
